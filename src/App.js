@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Container
         maxWidth="lg"
-        sx={{ paddingTop: "70px", paddingBottom: "50px" }}
+        sx={{ padding: "70px 0 50px 0" }}
       >
         <Pages />
       </Container>

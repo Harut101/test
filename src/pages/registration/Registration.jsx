@@ -3,6 +3,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import useForm from "../../hooks/useForm";
 import fv from "../../services/fieldValidators";
+import { Link } from "react-router-dom";
 
 const { required } = fv;
 
@@ -101,9 +102,13 @@ function Registration() {
           variant="contained"
           color="primary"
           fullWidth
+          sx={{padding: "10px"}}
         >
-          register
+          sign up
         </Button>
+        <Box sx={{ mt: 3, textAlign: "center" }}>
+          Already have an account? <Link to="/login">Login</Link>
+        </Box>
       </Box>
     </Box>
   );

@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     boxSizing: "border-box",
     margin: "0 auto",
+    backgroundColor: "#e5e5e5"
   },
 }));
 
