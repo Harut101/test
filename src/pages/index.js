@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Registration from "./registration/Registration";
 import Login from "./login/Login";
 import Profile from "./profile/Profile";
+import Invest from "./invest/Invest";
 
 function Pages() {
   return (
@@ -9,6 +10,7 @@ function Pages() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/registration" element={<Registration />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/invest" element={<Invest />} />
     </Routes>
   );
 }
