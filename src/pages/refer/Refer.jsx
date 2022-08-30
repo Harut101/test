@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Tooltip from "@mui/material/Tooltip";
 import ImageListItem from "@mui/material/ImageListItem";
+import Back from "../../components/back/Back";
 
 function Refer() {
   const [copied, setCopied] = useState(false);
@@ -13,6 +14,7 @@ function Refer() {
   return (
     <Box>
       <Box sx={{ mb: "20px" }}>
+        <Back url="/profile" />
         <Typography
           variant="h5"
           sx={{ fontWeight: "bold", fontSize: "px", textAlign: "center" }}
