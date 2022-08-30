@@ -76,7 +76,7 @@ function Profile() {
             }}
           >
             <MenuCard image={"/images/team.jpg"} title="My Team" />
-            <MenuCard image={"/images/refer.jpg"} title="Refer a Friend" />
+            <MenuCard image={"/images/refer.jpg"} title="Refer a Friend"  onClick={() => navigate("/refer")}/>
             <MenuCard image={"/images/send-msg.webp"} title="Send a Message" />
             <MenuCard image={"/images/wallet.webp"} title="Wallet" />
             <MenuCard image={"/images/about-us.jpg"} title="About Us" />

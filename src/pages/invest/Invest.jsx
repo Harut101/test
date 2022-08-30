@@ -72,7 +72,10 @@ function Registration() {
               text={
                 "53b744fed62bfdd6154326e04ab9ea7e05368b9753953eda8f54d2e5a9e195d5"
               }
-              onCopy={() => setCopied(true)}
+              onCopy={() => {
+                setCopied(true);
+                setTimeout(() => setCopied(false), 1000);
+              }}
             >
               <Tooltip open={copied} arrow={true} title="Copied">
                 <ContentCopyIcon sx={{ cursor: "pointer" }} />

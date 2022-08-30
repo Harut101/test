@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
-export default function ImgMediaCard({ image, title, desc }) {
+export default function ImgMediaCard({ image, title, desc, onClick }) {
   return (
     <Box
       sx={{
@@ -13,6 +13,7 @@ export default function ImgMediaCard({ image, title, desc }) {
         width: "100%",
         cursor: "pointer",
       }}
+      onClick={onClick}
     >
       <Card sx={{ width: "100%" }}>
         <CardMedia component="img" alt="team" height="140" image={image} />
