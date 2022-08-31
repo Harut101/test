@@ -16,6 +16,7 @@ function Wallet() {
   const { errors, register, onSubmit, setValue, getValue } = useForm(
     formSchema,
     (formFields) => {
+      console.log(formFields);
       setChangeMode(false);
       setAddress(formFields.withDrawAddress);
     }

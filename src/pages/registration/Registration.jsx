@@ -4,6 +4,8 @@ import Button from "@mui/material/Button";
 import useForm from "../../hooks/useForm";
 import fv from "../../services/fieldValidators";
 import { Link } from "react-router-dom";
+import ImageListItem from "@mui/material/ImageListItem";
+//import Typography from "@mui/material/Typography";
 
 const { required } = fv;
 
@@ -22,6 +24,34 @@ function Registration() {
         justifyContent: "center",
       }}
     >
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          mb: "30px",
+        }}
+      >
+        <ImageListItem sx={{ height: "130px !important", mb: "10px" }}>
+          <img
+            style={{ borderRadius: "20px 20px 0 0" }}
+            alt="A"
+            src="/images/purple-logo.svg"
+          />
+        </ImageListItem>
+        {/* <Typography
+          variant="p"
+          color={"secondary"}
+          sx={{
+            fontWeight: "bold",
+            fontSize: "20px",
+          }}
+        >
+          Join To Test
+        </Typography> */}
+      </Box>
       <Box
         sx={{
           width: "100%",
@@ -102,7 +132,7 @@ function Registration() {
           variant="contained"
           color="primary"
           fullWidth
-          sx={{padding: "10px"}}
+          sx={{ padding: "10px" }}
         >
           sign up
         </Button>

@@ -48,10 +48,10 @@ const useForm = (schema, submitHandler) => {
     );
 
     const setValue = (name, value) => {
-        setTimeout(() => {
+        if (fieldRefs.current[`${name}Ref`].current) {
             fieldRefs.current[`${name}Ref`].current.value = value;
-            setFormFields({ ...formFields, [name]: value });
-        }, 300);
+        }
+        setFormFields({ ...formFields, [name]: value });
     };
 
     const getValue = (name) => formFields[name];

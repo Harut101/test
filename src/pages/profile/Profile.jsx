@@ -31,7 +31,7 @@ function Profile() {
             <img
               style={{ borderRadius: "20px 20px 0 0" }}
               alt="A"
-              src="https://img.freepik.com/premium-vector/ethereum-cryptocurrency-digital-coin-presentation-computer-circuit-board-vector-blockchain_185386-777.jpg?w=2000"
+              src="/images/banner.svg"
             />
           </ImageListItem>
           <ProfileAvatar />
@@ -54,7 +54,7 @@ function Profile() {
                   alignItems: "center",
                 }}
               >
-                DP: 0 &nbsp;{" "}
+                Balance: 0 &nbsp;{" "}
                 <RefreshIcon sx={{ fontSize: "20px", cursor: "pointer" }} />
               </Typography>
             </Box>
