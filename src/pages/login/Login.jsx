@@ -22,13 +22,13 @@ function Registration() {
         justifyContent: "center",
       }}
     >
-       <ImageListItem sx={{ height: "130px !important", mb: "10px" }}>
-          <img
-            style={{ borderRadius: "20px 20px 0 0" }}
-            alt="A"
-            src="/images/purple-logo.svg"
-          />
-        </ImageListItem>
+      <ImageListItem sx={{ height: "130px !important", mb: "30px" }}>
+        <img
+          style={{ borderRadius: "20px 20px 0 0" }}
+          alt="A"
+          src="/images/purple-logo.svg"
+        />
+      </ImageListItem>
       <Box
         sx={{
           width: "100%",

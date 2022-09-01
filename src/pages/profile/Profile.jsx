@@ -11,7 +11,10 @@ import { useNavigate } from "react-router-dom";
 function Profile() {
   let navigate = useNavigate();
   return (
-    <Container maxWidth="xl" sx={{ display: "flex", justifyContent: "center", padding: 0 }}>
+    <Container
+      maxWidth="xl"
+      sx={{ display: "flex", justifyContent: "center", padding: 0 }}
+    >
       <Box
         sx={{
           width: ["100%", "90%"],
@@ -41,7 +44,7 @@ function Profile() {
             <Box sx={{ width: "70%", margin: "0 0 20px 0" }}>
               <Typography
                 variant="p"
-                sx={{ fontWeight: "bold", fontSize: "20px"}}
+                sx={{ fontWeight: "bold", fontSize: "20px" }}
               >
                 Brat
               </Typography>
@@ -60,10 +63,19 @@ function Profile() {
             </Box>
           </Box>
           <Box>
-            <Button variant="contained" color="primary" onClick={() => navigate("/invest")}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => navigate("/invest")}
+            >
               Invest
             </Button>
-            <Button variant="contained" color="secondary" sx={{ ml: "10px" }}>
+            <Button
+              variant="contained"
+              color="secondary"
+              sx={{ ml: "10px" }}
+              onClick={() => navigate("/withdraw")}
+            >
               withdraw
             </Button>
           </Box>
@@ -76,9 +88,17 @@ function Profile() {
             }}
           >
             <MenuCard image={"/images/team.jpg"} title="My Team" />
-            <MenuCard image={"/images/refer.jpg"} title="Refer a Friend"  onClick={() => navigate("/refer")}/>
+            <MenuCard
+              image={"/images/refer.jpg"}
+              title="Refer a Friend"
+              onClick={() => navigate("/refer")}
+            />
             <MenuCard image={"/images/send-msg.webp"} title="Send a Message" />
-            <MenuCard image={"/images/wallet.webp"} title="Wallet" onClick={() => navigate("/wallet")}/>
+            <MenuCard
+              image={"/images/wallet.webp"}
+              title="Wallet"
+              onClick={() => navigate("/wallet")}
+            />
             <MenuCard image={"/images/about-us.jpg"} title="About Us" />
           </Box>
         </Box>

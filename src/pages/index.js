@@ -5,6 +5,7 @@ import Profile from "./profile/Profile";
 import Invest from "./invest/Invest";
 import Refer from "./refer/Refer";
 import Wallet from "./wallet/Wallet";
+import Withdraw from "./withdraw/Withdraw";
 
 function Pages() {
   return (
@@ -15,6 +16,7 @@ function Pages() {
       <Route path="/invest" element={<Invest />} />
       <Route path="/refer" element={<Refer />} />
       <Route path="/wallet" element={<Wallet />} />
+      <Route path="/withdraw" element={<Withdraw />} />
     </Routes>
   );
 }
