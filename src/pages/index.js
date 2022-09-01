@@ -6,10 +6,12 @@ import Invest from "./invest/Invest";
 import Refer from "./refer/Refer";
 import Wallet from "./wallet/Wallet";
 import Withdraw from "./withdraw/Withdraw";
+import TaskBoard from "./taskBoard/TaskBoard";
 
 function Pages() {
   return (
     <Routes>
+      <Route path="/" element={<TaskBoard />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/registration" element={<Registration />} />
       <Route path="/login" element={<Login />} />
