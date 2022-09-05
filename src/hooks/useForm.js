@@ -49,8 +49,8 @@ const useForm = (schema, submitHandler) => {
 
     const setValue = useCallback(
         (name, value) => {
-            if (fieldRefs.current[`${name}Ref`].current) {
-                fieldRefs.current[`${name}Ref`].current.value = value;
+            if (fieldRefs.current[`${name}`].current) {
+                fieldRefs.current[`${name}`].current.value = value;
             }
             setFormFields({ ...formFields, [name]: value });
         },
@@ -61,11 +61,26 @@ const useForm = (schema, submitHandler) => {
 
     const setError = useCallback((name, message) => setErrors({ ...errors, [name]: message }), [errors]);
 
+    const reset = useCallback(
+        (name = null) => {
+            if (name) {
+                setFormFields({ ...formFields, [name]: schema.initialValues[name] });
+                fieldRefs.current[`${name}`].current.value = schema.initialValues[name];
+            } else {
+                setFormFields({ ...schema.initialValues });
+                for (const refName in fieldRefs.current) {
+                    fieldRefs.current[refName].current.value = schema.initialValues[refName];
+                }
+            }
+        },
+        [formFields, fieldRefs, schema.initialValues]
+    );
+
     const register = (name) => {
         /* eslint-disable */
         const fieldRef = useRef();
 
-        fieldRefs.current[`${name}Ref`] = fieldRef;
+        fieldRefs.current[`${name}`] = fieldRef;
 
         return {
             name,
@@ -82,6 +97,7 @@ const useForm = (schema, submitHandler) => {
         setValue,
         getValue,
         setError,
+        reset,
     };
 };
 
