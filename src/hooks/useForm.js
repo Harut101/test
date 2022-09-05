@@ -1,5 +1,5 @@
-import { useState, useCallback, useRef } from 'react';
-import validateForm from '../services/formValidator';
+import { useState, useCallback, useRef } from "react";
+import validateForm from "../services/formValidator";
 
 function isEmpty(obj) {
     return Object.keys(obj).length === 0;
@@ -47,14 +47,19 @@ const useForm = (schema, submitHandler) => {
         [formFields, submitted, errors, schema]
     );
 
-    const setValue = (name, value) => {
-        if (fieldRefs.current[`${name}Ref`].current) {
-            fieldRefs.current[`${name}Ref`].current.value = value;
-        }
-        setFormFields({ ...formFields, [name]: value });
-    };
+    const setValue = useCallback(
+        (name, value) => {
+            if (fieldRefs.current[`${name}Ref`].current) {
+                fieldRefs.current[`${name}Ref`].current.value = value;
+            }
+            setFormFields({ ...formFields, [name]: value });
+        },
+        [formFields, fieldRefs]
+    );
 
-    const getValue = (name) => formFields[name];
+    const getValue = useCallback((name) => formFields[name], [formFields]);
+
+    const setError = useCallback((name, message) => setErrors({ ...errors, [name]: message }), [errors]);
 
     const register = (name) => {
         /* eslint-disable */
@@ -76,6 +81,7 @@ const useForm = (schema, submitHandler) => {
         onSubmit,
         setValue,
         getValue,
+        setError,
     };
 };
 
